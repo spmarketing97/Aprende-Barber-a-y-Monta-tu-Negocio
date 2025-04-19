@@ -1,0 +1,228 @@
+/* Estilos para el widget de precio */
+.price-widget {
+    background-color: var(--secondary-color);
+    padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.price-widget-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.price-widget-info {
+    flex: 1;
+    padding-right: 2rem;
+    color: white;
+}
+
+.price-widget-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.price-widget-features {
+    margin-bottom: 1.5rem;
+}
+
+.price-widget-feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.price-widget-feature i {
+    color: var(--primary-color);
+    margin-right: 0.8rem;
+    font-size: 1.2rem;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.price-action {
+    flex: 0 0 350px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-action:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.price-tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.original-price {
+    color: #ddd;
+    font-size: 1.6rem;
+    text-decoration: line-through;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.original-price::after {
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 2px;
+    background-color: rgba(255, 0, 0, 0.5);
+    top: 50%;
+    left: -5%;
+    transform: rotate(-5deg);
+}
+
+.current-price {
+    color: white;
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.limited-offer {
+    position: absolute;
+    top: 1rem;
+    right: -3rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 700;
+    padding: 0.4rem 3rem;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.limited-offer i {
+    margin-right: 0.3rem;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.price-widget .cta-button {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #e04848 100%);
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
+}
+
+.price-widget .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.5);
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 992px) {
+    .price-widget-container {
+        flex-direction: column;
+        padding: 0 1.5rem;
+    }
+    
+    .price-widget-info {
+        padding-right: 0;
+        margin-bottom: 2.5rem;
+        text-align: center;
+    }
+    
+    .price-widget-feature {
+        justify-content: center;
+    }
+    
+    .price-action {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .price-widget {
+        padding: 2.5rem 0;
+    }
+    
+    .price-widget-title {
+        font-size: 1.8rem;
+    }
+    
+    .price-widget-feature {
+        font-size: 1rem;
+    }
+    
+    .current-price {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .price-widget {
+        padding: 2rem 0;
+    }
+    
+    .price-widget-container {
+        padding: 0 1rem;
+    }
+    
+    .price-widget-title {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .price-widget-feature {
+        margin-bottom: 0.8rem;
+    }
+    
+    .price-action {
+        padding: 1.8rem;
+        max-width: 320px;
+    }
+    
+    .original-price {
+        font-size: 1.4rem;
+    }
+    
+    .current-price {
+        font-size: 2.5rem;
+    }
+    
+    .limited-offer {
+        font-size: 0.8rem;
+        padding: 0.3rem 2.5rem;
+        right: -2.5rem;
+    }
+    
+    .price-widget .cta-button {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+} 

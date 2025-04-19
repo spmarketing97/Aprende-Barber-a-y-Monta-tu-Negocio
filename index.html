@@ -3,12 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=(), browsing-topics=()">
+    <!-- Indicar a Chrome que no use cookies de terceros -->
+    <meta http-equiv="origin-trial" content="Third-Party-Cookie-Phase-out">
     <title>Aprende Barbería y Monta tu Negocio</title>
+    <meta name="description" content="Domina el arte de la barbería y aprende a iniciar tu propio negocio rentable con nuestro curso completo. ¡Conviértete en un profesional de la barbería hoy!">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            'send_page_view': true,
+            'anonymize_ip': true,
+            'cookie_flags': 'samesite=none;secure'
+        });
+    </script>
+    
+    <style>
+        :root {
+            --primary-color: #c71818;
+            --secondary-color: #333;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/benefits-slider.css">
+    <link rel="stylesheet" href="css/accordion.css">
+    <link rel="stylesheet" href="css/testimonials-slider.css">
+    <link rel="stylesheet" href="css/price-widget.css">
+    <link rel="stylesheet" href="css/prices-widget.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Eliminar o corregir las rutas de favicon que no existen -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest"> -->
 </head>
 <body>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">
+                <img src="img/favicon.png" alt="Logo Aprende Barbería" class="nav-logo-img">
+                APRENDE BARBERÍA
+            </a>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#intro">Introducción</a>
+                <a href="#benefits">Beneficios</a>
+                <a href="#modules">Módulos</a>
+                <a href="#testimonials">Testimonios</a>
+                <a href="#features">Características</a>
+                <a href="#product-pricing" class="cta-nav-button">¡QUIERO EMPEZAR HOY!</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Contador de escasez (ahora flotante) -->
     <div class="countdown-container">
         <div class="countdown-content">
@@ -21,20 +83,20 @@
         </div>
     </div>
 
-    <!-- Header y Banner Principal -->
+    <!-- Header y Banner Principal - Mejorado -->
     <header class="hero">
-        <div class="hero-content">
-            <h1 class="highlight">APRENDE BARBERÍA Y MONTA TU NEGOCIO</h1>
-            <h2 class="highlight">¿Te gustaría aprender a realizar cortes de barba y cabello desde cero y montar tu propio negocio?</h2>
-            <a href="#cta-final" class="cta-button">¡EMPIEZA HOY MISMO!</a>
-        </div>
         <div class="hero-image">
             <img src="img/banner.jpg" alt="Aprende Barbería y Monta tu Negocio">
         </div>
+        <div class="hero-content">
+            <h1>APRENDE BARBERÍA Y MONTA TU NEGOCIO</h1>
+            <h2>¿Te gustaría aprender a realizar cortes de barba y cabello desde cero y montar tu propio negocio?</h2>
+            <a href="#benefits" class="cta-button">VER CONTENIDO</a>
+        </div>
     </header>
 
-    <!-- Introducción -->
-    <section class="intro">
+    <!-- Introducción - Mejorada -->
+    <section id="intro" class="intro">
         <div class="container">
             <p class="main-intro">Con el MasterClass <strong>APRENDE BARBERÍA Y MONTA TU NEGOCIO</strong> aprenderás todo lo que necesitas para realizar tu sueño: tener tu propia barbería.</p>
         </div>
@@ -44,129 +106,141 @@
     <section class="video-presentation">
         <div class="container">
             <div class="video-container">
-                <iframe width="992" height="583" src="https://www.youtube.com/embed/fuQXBUPSC6M?autoplay=1&mute=1" title="🔥 Aprende Barbería y Monta tu Negocio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="992" height="583" src="https://www.youtube.com/embed/fuQXBUPSC6M?autoplay=1&mute=1&loop=0&playlist=fuQXBUPSC6M&controls=1" 
+                    title="🔥 Aprende Barbería y Monta tu Negocio" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen></iframe>
             </div>
         </div>
     </section>
 
-    <!-- Sección de Beneficios (más minimalista) -->
-    <section class="benefits">
+    <!-- Sección de Beneficios - Slider simplificado -->
+    <section id="benefits" class="benefits">
         <h2>¿QUÉ VAS A LOGRAR?</h2>
         <div class="benefits-container">
-            <div class="benefit-group">
-                <div class="benefit-item">
-                    <i class="fas fa-cut"></i>
-                    <p>Desarrollar cortes de cabello desde principiante hasta avanzado</p>
+            <div class="benefits-slider">
+                <div class="benefits-slider-container">
+                    <div class="benefit-slide">
+                        <div class="benefit-content">
+                            <i class="fas fa-cut benefit-icon"></i>
+                            <h3>Dominar técnicas profesionales</h3>
+                            <p>Aprenderás todos los cortes modernos, degradados, uso de herramientas y técnicas de barbería que te permitirán destacar.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-slide">
+                        <div class="benefit-content">
+                            <i class="fas fa-store benefit-icon"></i>
+                            <h3>Crear tu propio negocio</h3>
+                            <p>Conocerás paso a paso cómo montar tu barbería, desde la inversión inicial hasta las estrategias de marketing.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-slide">
+                        <div class="benefit-content">
+                            <i class="fas fa-certificate benefit-icon"></i>
+                            <h3>Obtener certificación profesional</h3>
+                            <p>Recibirás un certificado reconocido que avalará tus conocimientos y te abrirá puertas en el mundo laboral.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-slide">
+                        <div class="benefit-content">
+                            <i class="fas fa-users benefit-icon"></i>
+                            <h3>Generar ingresos rápidamente</h3>
+                            <p>Conseguirás clientes desde el principio con técnicas probadas para fidelizar y hacer crecer tu cartera de clientes.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="benefit-item">
-                    <i class="fas fa-brush"></i>
-                    <p>Aprender la técnica de cepillados masculinos</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="fas fa-male"></i>
-                    <p>Hacer cada uno de los cortes de cabello y barba</p>
-                </div>
-            </div>
-            <div class="benefit-group">
-                <div class="benefit-item">
-                    <i class="fas fa-store"></i>
-                    <p>Aprender desde cero cómo empezar tu negocio</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="fas fa-eye"></i>
-                    <p>Aprender a perfilar cejas</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="fas fa-child"></i>
-                    <p>Entender el trato que debe recibir un niño en la barbería</p>
-                </div>
-            </div>
-            <div class="benefit-group">
-                <div class="benefit-item">
-                    <i class="fas fa-lightbulb"></i>
-                    <p>Desarrollar mucha creatividad</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="fas fa-tools"></i>
-                    <p>Aprender las técnicas adecuadas para cuchillas, máquinas y cepillos</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="fas fa-home"></i>
-                    <p>Decidir entre domicilios o negocio físico</p>
-                </div>
-            </div>
-            <div class="benefit-group">
-                <div class="benefit-item">
-                    <i class="fas fa-chart-line"></i>
-                    <p>Perder el temor de emprender y ser dueño de tu propio negocio</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="fas fa-balance-scale"></i>
-                    <p>Conocer ventajas y desventajas de cada paso en tu emprendimiento</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="fas fa-certificate"></i>
-                    <p>Acceder al certificado avalado por Hotmart y Seminarios Online</p>
-                </div>
+                <div class="benefits-dots"></div>
             </div>
         </div>
     </section>
 
-    <!-- Sección de Módulos (más minimalista) -->
-    <section class="modules">
+    <!-- Sección de Módulos - Acordeón -->
+    <section id="modules" class="modules">
         <h2>¿CÓMO LO VAS A LOGRAR?</h2>
         <div class="modules-container">
-            <div class="module-tabs">
-                <div class="module-tab active" data-target="tab-1">MÓDULOS 1-7</div>
-                <div class="module-tab" data-target="tab-2">MÓDULOS 8-14</div>
-                <div class="module-tab" data-target="tab-3">MÓDULOS 15-20</div>
-            </div>
-            
-            <div class="module-content">
-                <div class="module-tab-content active" id="tab-1">
-                    <div class="module-item">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 1: Bienvenida</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <ul>
                             <li>Bienvenida</li>
                             <li>Hoja de ruta y recomendaciones</li>
                             <li>¿Por qué es rentable este negocio?</li>
                         </ul>
                     </div>
-                    <div class="module-item">
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 2: Maneras de trabajar la barbería</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <ul>
                             <li>Monta tu local</li>
                             <li>Trabaja a domicilio</li>
                         </ul>
                     </div>
-                    <div class="module-item">
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 3: Herramientas, materiales y equipos</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <p>Aprenderás sobre todas las herramientas esenciales para tu barbería, incluyendo máquinas, navajas, tijeras y más.</p>
                     </div>
-                    <div class="module-item">
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 4: Tipos de implementos y marcas recomendadas</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <p>Guía completa sobre las mejores marcas y productos para equipar tu barbería con calidad profesional.</p>
                     </div>
-                    <div class="module-item">
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 5: Atención al cliente</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <ul>
                             <li>5 claves para una buena atención</li>
                             <li>4 trucos para tratar clientes difíciles</li>
                         </ul>
                     </div>
-                    <div class="module-item">
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 6: Técnica correcta para usar la barbera/navaja</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <p>Aprenderás las técnicas seguras y profesionales para el manejo de la navaja.</p>
                     </div>
-                    <div class="module-item">
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 7: Visagismo</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <p>Aprenderás a identificar los tipos de rostro y qué estilos favorecen a cada cliente.</p>
                     </div>
                 </div>
-                
-                <div class="module-tab-content" id="tab-2">
-                    <div class="module-item">
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 8: Tipos de cortes</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <ul>
                             <li>Corte clásico</li>
                             <li>Degradado bajo</li>
@@ -182,59 +256,116 @@
                             <li>Militar</li>
                         </ul>
                     </div>
-                    <div class="module-item">
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 9: Estilo y corte de barbas</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <ul>
                             <li>Barba alta y bigote</li>
                             <li>Barba y bigote delgado</li>
                             <li>Barba abundante</li>
                         </ul>
                     </div>
-                    <div class="module-item">
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 10: Técnica correcta de cepillado</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <p>Dominarás las técnicas de cepillado para diferentes tipos y longitudes de cabello.</p>
                     </div>
-                    <div class="module-item">
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 11: Cómo perfilar cejas, asesoría y técnica</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <p>Aprenderás técnicas profesionales para el perfilado de cejas masculinas.</p>
                     </div>
-                    <div class="module-item">
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 12: Recuperación de corte</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <p>Soluciones prácticas para recuperar cortes que no salieron como esperabas.</p>
                     </div>
-                    <div class="module-item">
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 13: Desarma, limpia y lubrica las herramientas</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <p>Mantenimiento profesional de tus herramientas para prolongar su vida útil.</p>
                     </div>
-                    <div class="module-item">
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 14: Desinfección del espacio</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <p>Protocolos de limpieza y desinfección para mantener tu barbería higiénica y segura.</p>
                     </div>
                 </div>
-                
-                <div class="module-tab-content" id="tab-3">
-                    <div class="module-item">
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 15: Qué hacer en caso de cortar al cliente</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <p>Protocolos de emergencia y soluciones rápidas para manejar accidentes menores.</p>
                     </div>
-                    <div class="module-item">
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 16: Productos para cabello, barba y limpieza facial</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <p>Guía completa sobre los mejores productos para cada tipo de cabello y barba.</p>
                     </div>
-                    <div class="module-item">
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 17: Formas de hacer publicidad</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <p>Estrategias efectivas para promocionar tu barbería y atraer nuevos clientes.</p>
                     </div>
-                    <div class="module-item">
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 18: Aquí termina tu curso</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <p>Resumen de todo lo aprendido y consejos finales para tu éxito profesional.</p>
                     </div>
-                    <div class="module-item">
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 19: Bonos</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <p>Material adicional y recursos exclusivos para complementar tu formación.</p>
                     </div>
-                    <div class="module-item">
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
                         <h3>MÓDULO 20: Video respuestas a preguntas frecuentes</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
                         <ul>
                             <li>¿Cómo puedo iniciar mi negocio sin tener experiencia?</li>
                             <li>¿Es mejor iniciar en local o a domicilio?</li>
@@ -247,13 +378,16 @@
         </div>
     </section>
 
-    <!-- Sección de Testimonios (arreglada) -->
-    <section class="testimonials">
+    <!-- Sección de Testimonios - Auto-Slider -->
+    <section id="testimonials" class="testimonials">
         <h2>LO QUE DICEN NUESTROS ALUMNOS</h2>
+        <h3 class="testimonials-subtitle">Transforma tu vida como ellos lo hicieron - Historias reales de éxito</h3>
         <div class="testimonials-slider">
-            <div class="testimonials-container">
+            <div class="testimonials-track">
                 <div class="testimonial-card">
-                    <img src="testimonials/testimonial1.jpg" alt="Testimonio 1">
+                    <div class="testimonial-avatar">
+                        <img src="testimonials/testimonial1.jpg" alt="Carlos Rodríguez">
+                    </div>
                     <h3>Carlos Rodríguez</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -265,7 +399,9 @@
                     <p>"Este curso cambió mi vida. Ahora tengo mi propia barbería y gano más de lo que jamás imaginé. La inversión valió cada centavo."</p>
                 </div>
                 <div class="testimonial-card">
-                    <img src="testimonials/testimonial2.jpg" alt="Testimonio 2">
+                    <div class="testimonial-avatar">
+                        <img src="testimonials/testimonial2.jpg" alt="Miguel Ángel López">
+                    </div>
                     <h3>Miguel Ángel López</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -277,7 +413,9 @@
                     <p>"Increíble la calidad de enseñanza. En menos de 3 meses ya estaba trabajando en una de las mejores barberías de mi ciudad."</p>
                 </div>
                 <div class="testimonial-card">
-                    <img src="testimonials/testimonial3.jpg" alt="Testimonio 3">
+                    <div class="testimonial-avatar">
+                        <img src="testimonials/testimonial3.jpg" alt="Alejandro Martínez">
+                    </div>
                     <h3>Alejandro Martínez</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -289,7 +427,9 @@
                     <p>"Lo que más me gustó fue la parte de cómo montar el negocio. Me dieron herramientas que no había visto en otros cursos."</p>
                 </div>
                 <div class="testimonial-card">
-                    <img src="testimonials/testimonial4.jpg" alt="Testimonio 4">
+                    <div class="testimonial-avatar">
+                        <img src="testimonials/testimonial4.jpg" alt="Fernando Torres">
+                    </div>
                     <h3>Fernando Torres</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -301,7 +441,9 @@
                     <p>"Excelente contenido, muy práctico y directo. Las técnicas de corte modernas me han permitido destacar entre la competencia."</p>
                 </div>
                 <div class="testimonial-card">
-                    <img src="testimonials/testimonial5.jpg" alt="Testimonio 5">
+                    <div class="testimonial-avatar">
+                        <img src="testimonials/testimonial5.jpg" alt="Daniel Sánchez">
+                    </div>
                     <h3>Daniel Sánchez</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -313,7 +455,9 @@
                     <p>"Gracias a este curso pude dejar mi trabajo anterior y dedicarme a lo que realmente me apasiona. Ahora tengo mi propia clientela."</p>
                 </div>
                 <div class="testimonial-card">
-                    <img src="testimonials/testimonial6.jpg" alt="Testimonio 6">
+                    <div class="testimonial-avatar">
+                        <img src="testimonials/testimonial6.jpg" alt="Pablo Herrera">
+                    </div>
                     <h3>Pablo Herrera</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -325,7 +469,9 @@
                     <p>"La asesoría post-curso es fantástica, siempre tienen respuesta a todas mis dudas. Me siento acompañado en mi emprendimiento."</p>
                 </div>
                 <div class="testimonial-card">
-                    <img src="testimonials/testimonial7.jpg" alt="Testimonio 7">
+                    <div class="testimonial-avatar">
+                        <img src="testimonials/testimonial7.jpg" alt="Roberto Díaz">
+                    </div>
                     <h3>Roberto Díaz</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -336,14 +482,96 @@
                     </div>
                     <p>"El curso superó mis expectativas. Las técnicas son fáciles de aprender y aplicar. Ahora tengo clientes que me buscan específicamente."</p>
                 </div>
+                <!-- Nuevos testimonios para completar 13 en total -->
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="testimonials/testimonial8.jpeg" alt="Javier Gómez">
+                    </div>
+                    <h3>Javier Gómez</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Empecé el curso con cero conocimientos y ahora puedo realizar cortes profesionales. El método de enseñanza es perfecto para principiantes."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="testimonials/testimonial9.jpeg" alt="Andrés Vargas">
+                    </div>
+                    <h3>Andrés Vargas</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"He tomado varios cursos de barbería, pero este es el único que realmente me enseñó a montar un negocio rentable. Ya tengo mi local propio."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="testimonials/testimonial10.jpeg" alt="Martín Acosta">
+                    </div>
+                    <h3>Martín Acosta</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Lo que más valoro es el enfoque práctico. En pocos días ya estaba practicando con amigos y mejorando mis técnicas. Sin duda la mejor inversión."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="testimonials/testimonial11.jpeg" alt="Santiago Méndez">
+                    </div>
+                    <h3>Santiago Méndez</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Gracias al módulo de gestión financiera pude organizar mi barbería de manera eficiente. Mi negocio creció un 60% en solo 3 meses."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="testimonials/testimonial12.jpeg" alt="Eduardo Campos">
+                    </div>
+                    <h3>Eduardo Campos</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Las técnicas de degradado que enseñan son impresionantes. Mis clientes quedan fascinados y me recomiendan constantemente. ¡Gracias Eliud!"</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="testimonials/testimonial13.jpeg" alt="Raúl Jiménez">
+                    </div>
+                    <h3>Raúl Jiménez</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"En solo 2 meses recuperé la inversión del curso. Las estrategias de marketing digital que enseñan funcionan de maravilla para atraer clientes."</p>
+                </div>
             </div>
-            <button class="slider-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>
-            <button class="slider-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>
-            <div class="slider-dots"></div>
         </div>
     </section>
 
-    <!-- Sección del productor (mejorada con widget destacado) -->
+    <!-- Sección del productor -->
     <section class="producer">
         <h2>ACERCA DEL PRODUCTOR</h2>
         <div class="producer-widget">
@@ -368,41 +596,80 @@
     </section>
 
     <!-- Sección de Características -->
-    <section class="features">
+    <section id="features" class="features">
         <h2>¿QUÉ INCLUYE EL CURSO?</h2>
         <div class="features-container">
             <div class="feature-item">
                 <i class="fas fa-video"></i>
                 <h3>+50 Horas de Video HD</h3>
+                <p>Accede a contenido detallado en alta definición, explicado paso a paso</p>
             </div>
             <div class="feature-item">
                 <i class="fas fa-file-pdf"></i>
                 <h3>Manuales Descargables</h3>
+                <p>Recursos complementarios para reforzar tu aprendizaje</p>
             </div>
             <div class="feature-item">
                 <i class="fas fa-comment"></i>
                 <h3>Soporte Continuo</h3>
+                <p>Asistencia permanente para resolver todas tus dudas</p>
             </div>
             <div class="feature-item">
                 <i class="fas fa-certificate"></i>
                 <h3>Certificación Profesional</h3>
+                <p>Avalada por Hotmart y Seminarios Online</p>
             </div>
             <div class="feature-item">
                 <i class="fas fa-chart-line"></i>
                 <h3>Plan de Negocio Completo</h3>
+                <p>Estrategias paso a paso para montar tu barbería desde cero</p>
             </div>
             <div class="feature-item">
                 <i class="fas fa-infinity"></i>
                 <h3>Acceso de por Vida</h3>
+                <p>Contenido disponible sin límite de tiempo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Preguntas Frecuentes -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="faq-title">Preguntas Frecuentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">¿Necesito experiencia previa para tomar el curso?</div>
+                    <div class="faq-answer">No, nuestro curso está diseñado para principiantes y profesionales por igual. Empezamos desde lo básico y avanzamos gradualmente hacia técnicas más complejas.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Cuánto tiempo tendré acceso al curso?</div>
+                    <div class="faq-answer">Tendrás acceso de por vida al curso, incluyendo todas las actualizaciones futuras sin costo adicional.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿El curso incluye certificado?</div>
+                    <div class="faq-answer">Sí, al completar el curso recibirás un certificado digital que podrás compartir en tus redes sociales y utilizar para tu portafolio profesional.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Cómo funciona la garantía de satisfacción?</div>
+                    <div class="faq-answer">Ofrecemos una garantía de satisfacción de 30 días. Si no estás satisfecho con el curso, puedes solicitar un reembolso completo dentro de los primeros 30 días después de tu compra.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Puedo ver las clases desde mi teléfono móvil?</div>
+                    <div class="faq-answer">Sí, nuestra plataforma es completamente responsive. Puedes acceder al contenido desde cualquier dispositivo: computadora, tablet o teléfono móvil.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Cuánto tiempo necesito dedicar al curso por semana?</div>
+                    <div class="faq-answer">Recomendamos dedicar al menos 3-5 horas semanales para obtener los mejores resultados. Sin embargo, el curso es a tu propio ritmo, por lo que puedes ajustarlo según tu disponibilidad.</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Sección del Certificado -->
-    <section class="certificate">
+    <section id="certificate" class="certificate">
         <div class="container">
             <h2>TU CERTIFICADO AL FINALIZAR</h2>
-            <div class="certificate-container">
+            <div class="certificate-container certificate-smaller">
                 <img src="img/certificate.jpg" alt="Certificado de finalización" class="certificate-img">
                 <div class="certificate-overlay">
                     <p>Certifica tus conocimientos y destaca en el mundo de la barbería</p>
@@ -411,50 +678,134 @@
         </div>
     </section>
 
-    <!-- Sección de Garantía -->
-    <section class="guarantee">
-        <div class="guarantee-content">
-            <i class="fas fa-shield-alt"></i>
-            <h2>GARANTÍA DE 7 DÍAS</h2>
-            <p>Si no estás completamente satisfecho con el curso dentro de los primeros 7 días después de tu compra, te devolvemos tu dinero sin hacer preguntas.</p>
-        </div>
-    </section>
-
-    <!-- Botón de Telegram -->
-    <div class="telegram-button">
-        <a href="https://t.me/SPMarketing_KR" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-telegram"></i> Contáctame en Telegram
-        </a>
-    </div>
-
-    <!-- CTA Final -->
-    <section id="cta-final" class="cta-final">
-        <h2>¡CONVIÉRTETE EN UN PROFESIONAL DE LA BARBERÍA AHORA!</h2>
-        <div class="pricing-container">
-            <div class="price-wrapper">
-                <div class="price-tag">
-                    <span class="original-price">$99.99</span>
-                    <span class="current-price">$49.99</span>
-                </div>
-                <div class="limited-offer">
-                    <i class="fas fa-fire"></i>
-                    <span>¡OFERTA LIMITADA!</span>
+    <!-- Widget de producto minimalista -->
+    <section class="prices-section" id="cta-final">
+        <div class="prices-container">
+            <div class="prices-title">
+                <h2 id="product-pricing">¡CONVIÉRTETE EN UN PROFESIONAL DE LA BARBERÍA AHORA!</h2>
+                <div class="prices-subtitle">
+                    <p>Todo lo que necesitas para dominar el arte de la barbería y construir tu propio negocio exitoso</p>
                 </div>
             </div>
-            <a href="https://hotm.art/AprendeBarberiayMontatuNegocioCheckOut" class="cta-button final" target="_blank" rel="noopener noreferrer">¡QUIERO EMPEZAR HOY!</a>
+            
+            <div class="price-cards">
+                <div class="price-card featured">
+                    <span class="price-tag">OFERTA LIMITADA</span>
+                    <div class="card-header">
+                        <h3 class="card-name">Curso Completo de Barbería Profesional</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="current-price">47</span>
+                            <span class="original-price">$97</span>
+                        </div>
+                        <span class="price-period">Pago único - Acceso de por vida</span>
+                        <span class="saving-tag">¡Ahorras $50!</span>
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> +50 horas de contenido HD</li>
+                        <li><i class="fas fa-check-circle"></i> Certificado de finalización</li>
+                        <li><i class="fas fa-check-circle"></i> Plan de negocio paso a paso</li>
+                        <li><i class="fas fa-check-circle"></i> Acceso de por vida a actualizaciones</li>
+                        <li><i class="fas fa-check-circle"></i> Soporte personalizado</li>
+                        <li><i class="fas fa-check-circle"></i> Recursos y manuales descargables</li>
+                    </ul>
+                    
+                    <a href="https://hotm.art/AprendeBarberiayMontatuNegocioCheckOut" class="btn-buy" target="_blank" rel="noopener noreferrer">¡OBTENER AHORA!</a>
+                </div>
+            </div>
+            
+            <div class="guarantee">
+                <i class="fas fa-shield-alt"></i>
+                <div class="guarantee-text">
+                    <h4>Garantía de satisfacción de 7 días</h4>
+                    <p>Si no estás satisfecho con el curso dentro de los primeros 7 días, te devolvemos tu dinero sin preguntas.</p>
+                </div>
+            </div>
+            
+            <!-- Sección de Contacto -->
+            <div class="contact-section">
+                <div class="contact-container">
+                    <h4>¿TIENES DUDAS? CONTÁCTANOS</h4>
+                    <p>Estamos aquí para resolver todas tus preguntas sobre el curso y ayudarte a iniciar tu camino en la barbería profesional.</p>
+                    <a href="mailto:hristiankrasimirov7@gmail.com?subject=APRENDE BARBERÍA Y MONTA TU NEGOCIO" class="contact-button">
+                        <i class="fas fa-envelope"></i> ENVÍANOS UN EMAIL
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>2025 SPMarketing - Agency Todos Los Derechos Reservados</p>
-        <div class="social-links">
-            <a href="https://t.me/SPMarketing_KR" target="_blank" rel="noopener noreferrer" class="telegram-link">
-                <i class="fab fa-telegram"></i> @SPMarketing_KR
-            </a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/favicon.png" alt="Logo Aprende Barbería" class="footer-logo-img">
+                    <span>APRENDE BARBERÍA</span>
+                </div>
+                <div class="footer-nav">
+                    <a href="#intro" class="footer-link">Introducción</a>
+                    <a href="#benefits" class="footer-link">Beneficios</a>
+                    <a href="#modules" class="footer-link">Módulos</a>
+                    <a href="#testimonials" class="footer-link">Testimonios</a>
+                    <a href="#features" class="footer-link">Características</a>
+                    <a href="#faq" class="footer-link">Preguntas Frecuentes</a>
+                </div>
+                <div class="footer-legal">
+                    <a href="terminos-uso.html" class="footer-link">Términos y condiciones</a>
+                    <a href="politica-privacidad.html" class="footer-link">Política de privacidad</a>
+                    <a href="politica-cookies.html" class="footer-link">Política de cookies</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>© 2025 SPMarketing – ImpactoDigital - Todos los derechos reservados.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Utilizamos cookies para mejorar tu experiencia en nuestro sitio web. Al continuar navegando, aceptas nuestra <a href="#">política de cookies</a>.</p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="btn-accept">Aceptar</button>
+                <button id="reject-cookies" class="btn-reject">Rechazar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-wrapper">
+        <button class="chatbot-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="chatbot-greeting">
+            <p>¡Hola! ¿Te gustaría conocer más sobre nuestro curso de barbería?</p>
+        </div>
+        <div class="chatbot-container">
+            <div class="chatbot-header">
+                <h3>Asistente de Barbería</h3>
+                <button class="chatbot-close">&times;</button>
+            </div>
+            <div class="chatbot-messages">
+                <!-- Los mensajes se cargarán mediante JavaScript -->
+            </div>
+            <div class="chatbot-options">
+                <!-- Las opciones se cargarán mediante JavaScript -->
+            </div>
+            <div class="chatbot-input">
+                <input type="text" placeholder="Escribe tu pregunta...">
+                <button>Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="js/script.js"></script>
+    <script src="js/cookies.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/analytics.js"></script>
 </body>
 </html>
