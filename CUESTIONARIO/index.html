@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=(), browsing-topics=()">
+    <title>Cuestionario - Aprende Barbería y Monta tu Negocio</title>
+    <meta name="description" content="Cuestionario para conocer tus necesidades y ofrecerte la mejor experiencia en nuestro curso de barbería.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/cuestionario.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="img/favicon.png" alt="Logo Aprende Barbería">
+                <h1>APRENDE BARBERÍA</h1>
+            </div>
+            <h2>Cuestionario Personalizado</h2>
+            <p>Ayúdanos a conocerte mejor para ofrecerte la mejor experiencia</p>
+        </header>
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="progress-text">Pregunta <span id="current-question">1</span> de <span id="total-questions">10</span></div>
+        </div>
+
+        <main id="cuestionario-container">
+            <!-- El contenido del cuestionario se cargará dinámicamente -->
+            <form id="cuestionario-form">
+                <div id="pregunta-container" class="pregunta-container">
+                    <!-- Las preguntas se cargarán dinámicamente aquí -->
+                </div>
+                
+                <div id="datos-personales" class="datos-personales hidden">
+                    <h3>Tus Datos</h3>
+                    <p>Completa tus datos para enviarte información personalizada</p>
+                    
+                    <div class="input-group">
+                        <label for="nombre">Nombre completo*</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="email">Correo electrónico*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="telefono">Teléfono (opcional)</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="acepto-terminos" name="acepto-terminos" required>
+                        <label for="acepto-terminos">Acepto los <a href="../terminos-uso.html" target="_blank">términos y condiciones</a> y la <a href="../politica-privacidad.html" target="_blank">política de privacidad</a>.*</label>
+                    </div>
+                </div>
+                
+                <div class="buttons-container">
+                    <button type="button" id="btn-anterior" class="btn btn-secondary hidden">Anterior</button>
+                    <button type="button" id="btn-siguiente" class="btn btn-primary">Siguiente</button>
+                    <button type="submit" id="btn-enviar" class="btn btn-success hidden">Enviar Respuestas</button>
+                </div>
+            </form>
+        </main>
+        
+        <!-- Modal de envío exitoso -->
+        <div id="modal-exito" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Procesando respuestas...</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="loading-icon"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Aprende Barbería. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="../terminos-uso.html">Términos de uso</a>
+            <a href="../politica-privacidad.html">Política de privacidad</a>
+            <a href="../politica-cookies.html">Política de cookies</a>
+        </div>
+    </footer>
+
+    <script src="js/cuestionario.js"></script>
+</body>
+</html> 
