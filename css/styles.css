@@ -1782,24 +1782,24 @@ section h2 {
 
 /* Prueba Social */
 .social-proof {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 12px 15px;
     margin-top: 20px;
     text-align: center;
-    box-shadow: var(--box-shadow);
-    max-width: 90%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    max-width: 85%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .hero .social-proof {
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .social-proof h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
     color: var(--primary-color);
 }
 
@@ -1814,37 +1814,45 @@ section h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 5px 8px;
 }
 
 .social-proof-number {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: bold;
     color: var(--primary-color);
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .social-proof-label {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     color: var(--secondary-color);
 }
 
 .social-proof-divider {
     width: 1px;
-    height: 40px;
+    height: 30px;
     background-color: #ddd;
-    margin: 0 10px;
+    margin: 0 8px;
 }
 
 @media (max-width: 768px) {
+    .social-proof {
+        padding: 10px;
+    }
+    
     .social-proof-content {
         flex-direction: column;
     }
     
     .social-proof-divider {
-        width: 50px;
+        width: 40px;
         height: 1px;
-        margin: 10px 0;
+        margin: 8px 0;
+    }
+    
+    .social-proof-number {
+        font-size: 1.4rem;
     }
 }
 
